@@ -1,2 +1,4 @@
 1. Create a YAML manifest for a CronJob named hello that runs the date command in a busybox container named hello every minute, with a timeout of 22 seconds.
   - Here you use the Active DeadlineSecs for the timeout/completions
+    kubectl create cronjob my-job --image=busybox --schedule="*/1 * * * *" --dry-run=client -o yaml > cron.yaml -- date
+    Edit yaml file to have the dealinesec
