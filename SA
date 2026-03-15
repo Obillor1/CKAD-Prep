@@ -1,0 +1,3 @@
+Create a new SA named backend-team. Print out the Token for the SA in YML format.
+
+To get Token: Kubectl get SA -o yaml under secrets: -name: <<token>> 
