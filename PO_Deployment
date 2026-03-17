@@ -1,0 +1,2 @@
+Get the pos with labels env=dev  & env=prod
+k get po -l 'env in(dev,prod)'
