@@ -2,5 +2,6 @@
   - Here you use the Active DeadlineSecs for the timeout/completions
     kubectl create cronjob my-job --image=busybox --schedule="*/1 * * * *" --dry-run=client -o yaml > cron.yaml -- date
     Edit yaml file to have the dealinesec 
+
     activeDeadlineSeconds defines how long the Job is allowed to run before Kubernetes terminates it.
    
