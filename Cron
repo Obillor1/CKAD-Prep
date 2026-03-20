@@ -5,3 +5,6 @@
 
     activeDeadlineSeconds defines how long the Job is allowed to run before Kubernetes terminates it.
    
+“Non-parallel job” = only one Pod running at a time
+parralelism =1
+Or from KK parralelism wasn't defined
