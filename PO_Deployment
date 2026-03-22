@@ -5,3 +5,6 @@ k get po -l 'env in(dev,prod)'
 When asked to run a command in a pod,, ensure the/bin/sh(prov a terminal) and -c (rep command) is present
 
     command: ["/bin/sh", "-c", "while true; do date; sleep $TIME_FREQ;done "> /opt/time/time/log]
+
+
+Creating a Po with label: k run nginx --image=nginx -l tier=mesg (This works only for po and not deploy
