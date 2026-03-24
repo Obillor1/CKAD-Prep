@@ -1,0 +1,25 @@
+Team Mercury asked you to perform some operations using Helm, all in Namespace mercury:
+
+Delete release internal-issue-report-apiv1
+
+Upgrade release internal-issue-report-apiv2 to any newer version of chart killershell/nginx available
+
+Install a new release internal-issue-report-apache of chart killershell/apache. The Deployment should have two replicas, set these via Helm-values during install
+
+There seems to be a broken release, stuck in pending-install state. Find it and delete it
+
+
+1. Delete
+++++++++++
+➜ helm -n mercury ls
+➜ helm -n mercury uninstall internal-issue-report-apiv1
+➜ helm -n mercury ls
+
+
+2. Upgrade
++++++++++++
+➜ helm repo list
+➜ helm repo update
+➜ helm search repo nginx --versions
+➜ helm -n mercury upgrade internal-issue-report-apiv2 killershell/nginx
+
