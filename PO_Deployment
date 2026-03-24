@@ -8,3 +8,9 @@ When asked to run a command in a pod,, ensure the/bin/sh(prov a terminal) and -c
 
 
 Creating a Po with label: k run nginx --image=nginx -l tier=mesg (This works only for po and not deploy
+
+
+
+Your manager would like to run a command manually on occasion to output the status of that exact Pod. Please write a command that does this into /opt/course/2/pod1-status-command.sh on ckad5601. The command should use kubectl.
+kubectl -n default describe pod pod1 | grep -i status:   >>>>>> write into # /opt/course/2/pod1-status-command.sh file
+Run: sh /opt/course/2/pod1-status-command.sh
