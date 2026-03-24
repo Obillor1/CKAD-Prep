@@ -8,3 +8,10 @@
 “Non-parallel job” = only one Pod running at a time
 parralelism =1
 Or from KK parralelism wasn't defined
+
+
+Q
+++++
+Team Neptune needs a Job template located at /opt/course/3/job.yaml. This Job should run image busybox:1.31.0 and execute sleep 2 && echo done. It should be in namespace neptune, run a total of 3 times and should execute 2 runs in parallel.
+
+completions 3 also mean running a total of 3 times
