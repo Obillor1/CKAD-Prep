@@ -17,3 +17,13 @@ Run: sh /opt/course/2/pod1-status-command.sh
 
 
 
+Docker/Podman
++++++++++++++
+➜ sudo podman build -t registry.killer.sh:5000/sun-cipher:v1-podman .
+➜ sudo podman run -d --name sun-cipher registry.killer.sh:5000/sun-cipher:v1-podman
+➜ sudo podman logs sun-cipher ( writing the logs out)
+
+
+SideCar
+++++++++
+Sidecar containers in K8s are initContainers with restartPolicy: Always. 
