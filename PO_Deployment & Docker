@@ -27,3 +27,8 @@ Docker/Podman
 SideCar
 ++++++++
 Sidecar containers in K8s are initContainers with restartPolicy: Always. 
+
+Label
++++++
+k -n sun label pod -l "type in (worker,runner)" protected=true
+
