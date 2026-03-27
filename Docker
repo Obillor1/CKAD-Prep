@@ -1,0 +1,10 @@
+Save as Docker format
+++++++++++++++++++++
+docker build -t myimage:latest .
+docker save myimage:latest -o myimage.tar (myimage.tar   (Docker format)
+
+
+Save as OCI format (important difference)
+++++++++++++++++++++++++++++++++++++++++
+docker buildx build --output type=oci,dest=myimage.tar .
+myimage.tar   (OCI format)
