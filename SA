@@ -9,3 +9,8 @@ Get the token by running the command:
 ➜ k -n neptune get secret neptune-secret-1 -o yaml and decode with -   echo 'token' | base64 -d
 OR
 ➜ k -n neptune describe secret neptune-secret-1 - this gives the decoded value
+
+
+After Updating the SA name in a deployment
++++++++++++++++++++++++++++++++++++++++++
+kubectl rollout restart deployment <your-deployment> (Trigger new pods so they pick up the new ServiceAccount:) That is if you are not asked not to delete the deployment or pods
