@@ -32,3 +32,24 @@ Label
 +++++
 k -n sun label pod -l "type in (worker,runner)" protected=true
 
+
+CANRY DEPLOYMENT
++++++++++++++++
+Add a label to the matLabels and template date to differentiate canry and make it easier for debugging:
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp
+      version: canary
+  template:
+    metadata:
+      labels:
+        app: myapp
+        version: canary
+
+
+Keep app: myapp SAME as main (so Service balances traffic)
+Add version: canary to distinguish
+Selector must match template labels exactly
