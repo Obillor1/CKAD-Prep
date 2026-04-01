@@ -35,6 +35,8 @@ k -n sun label pod -l "type in (worker,runner)" protected=true
 
 CANRY DEPLOYMENT
 +++++++++++++++
+➜ Note: For the service, the label should match both canery and green
+
 Add a label to the matLabels and template date to differentiate canry and make it easier for debugging:
 
 spec:
