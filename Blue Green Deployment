@@ -1,0 +1,11 @@
+Remove the Creation Stamps and the UID of the template provided  if any
+ - Changet the name as given
+ - add the environmental variable to both matchlabels and template labels 
+
+Under SVC
+++++++++
+Edit selector to that of the green as requested
+
+For Canary:
+++++++++++
+Re-check the svc by editing and confirm it has one label that matches both deployments
