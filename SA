@@ -14,3 +14,26 @@ OR
 After Updating the SA name in a deployment
 +++++++++++++++++++++++++++++++++++++++++
 kubectl rollout restart deployment <your-deployment> (Trigger new pods so they pick up the new ServiceAccount:) That is if you are not asked not to delete the deployment or pods
+
+
+
+Exam Prep:
+++++++++++++
+➜ In namespace audit, Pod log-collector exists but is failing with authorization errors. 
+
+Short:
++++++
+Create a service account, role and rolebinding in the audit namespace
+If there are existing role, update the namespace to audit
+
+Check the Pod logs to identify what permissions are needed:
+
+kubectl logs -n audit log-collector
+The logs show: User "system:serviceaccount:audit:default" cannot list pods in the namespace "audit"
+
+Your task:
+
+Create a ServiceAccount named log-sa in namespace audit
+Create a Role log-role that grants get, list, and watch on resource pods
+Create a RoleBinding log-rb binding log-role to log-sa
+Update Pod log-collector to use ServiceAccount log-sa
