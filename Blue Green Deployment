@@ -1,5 +1,5 @@
 Remove the Creation Stamps and the UID of the template provided  if any
- - Changet the name as given
+ - Change the name as given
  - add the environmental variable to both matchlabels and template labels 
 
 Under SVC
