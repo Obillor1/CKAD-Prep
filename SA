@@ -34,6 +34,6 @@ The logs show: User "system:serviceaccount:audit:default" cannot list pods in th
 Your task:
 
 Create a ServiceAccount named log-sa in namespace audit
-Create a Role log-role that grants get, list, and watch on resource pods
+Create a Role log-role that grants get, list, and watch on resource pods - ensure role is the the audit namespace same with rolebinding
 Create a RoleBinding log-rb binding log-role to log-sa
 Update Pod log-collector to use ServiceAccount log-sa
